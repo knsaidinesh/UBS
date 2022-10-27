@@ -11,13 +11,23 @@ public enum Furniture {
 	COUCH("Couch", 500.0f);
 
 	public void addToOrder(final Furniture type, final int furnitureCount) 
-	{ Integer count = 0; if(furnitures.containsKey(type)) { count = furnitures.get(type); } furnitures.put(type, count + furnitureCount); }
+	{ 
+		Integer count = 0; if(furnitures.containsKey(type)) { count = furnitures.get(type); } furnitures.put(type, count + furnitureCount); 
+	}
 	private final String label;
 	private final float cost;
         public HashMap<Furniture, Integer> getOrderedFurniture()
-	{ return new HashMap<Furniture, Integer>(furnitures); }
-	public float getTotalOrderCost() { if(!furnitures.isEmpty()) {  return furnitures.entrySet().stream()    .map(f -> f.getKey().cost() * f.getValue())    .collect(Collectors.toList())    .stream()    .reduce(Float::sum)    .get(); } return 0.0f; }
-	Furniture(String label, float cost) {
+	{ 
+		return new HashMap<Furniture, Integer>(furnitures);
+	}
+	public float getTotalOrderCost()
+	{
+		if(!furnitures.isEmpty()) 
+		{
+			return furnitures.entrySet().stream()    .map(f -> f.getKey().cost() * f.getValue())    .collect(Collectors.toList())    .stream()    .reduce(Float::sum)    .get(); } return 0.0f;
+	}
+	Furniture(String label, float cost) 
+	{
 		this.label = label;
 		this.cost = cost;
 	}
