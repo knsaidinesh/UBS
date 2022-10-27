@@ -3,7 +3,8 @@ package hackerrank;
 import java.util.HashMap;
 
 public class FurnitureOrder implements FurnitureOrderInterface {
-   public class FurnitureOrder implements FurnitureOrderInterface {  private final HashMap<Furniture, Integer> furnitures;
+public class FurnitureOrder implements FurnitureOrderInterface { 
+private final HashMap<Furniture, Integer> furnitures;
 
     /**
      * Initialize a new mapping of Furniture types to order quantities.
