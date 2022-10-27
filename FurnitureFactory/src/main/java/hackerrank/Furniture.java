@@ -32,13 +32,21 @@ public enum Furniture {
 		this.cost = cost;
 	}
 
-	public int getTypeCount(Furniture type) { if(furnitures.containsKey(type)) {  return furnitures.get(type); } return 0; }
+	public int getTypeCount(Furniture type) { if(furnitures.containsKey(type)) {  
+		return furnitures.get(type);
+	} 
+         return 0;
+	}
 	public String label() {
 		return null;
 	}
 
-	return furnitures.entrySet().stream()    .map(f -> f.getKey().cost() * f.getValue())    .collect(Collectors.toList())    .stream()    .reduce(Float::sum)    .get(); } return 0.0f; }
-	public float cost() {
+	return furnitures.entrySet().stream()    .map(f -> f.getKey().cost() * f.getValue())    .collect(Collectors.toList())    .stream()    .reduce(Float::sum)    .get();
+       } 
+     return 0.0f;
+       }
+	public float cost() 
+	{
 		return -1.0f;
 	}
 }
