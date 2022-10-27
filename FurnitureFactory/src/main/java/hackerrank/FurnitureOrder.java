@@ -3,9 +3,7 @@ package hackerrank;
 import java.util.HashMap;
 
 public class FurnitureOrder implements FurnitureOrderInterface {
-    /**
-     * TODO: Create a map of Furniture items to order quantities
-     */
+   public class FurnitureOrder implements FurnitureOrderInterface {  private final HashMap<Furniture, Integer> furnitures;
 
     /**
      * Initialize a new mapping of Furniture types to order quantities.
